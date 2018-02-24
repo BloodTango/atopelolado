@@ -94,11 +94,11 @@ class ReplyToTweet(tweepy.StreamListener):
 
             full_reply = create_tweet(tweetText)
             if full_reply[1] == False:
-                replyText = '@' + screenName + ' ' + "No he podido encontrar " + full_reply[0] + " intenta con otra cosa o algo"
+                replyText = '@' + screenName + ' ' + "No he podido encontrar " + full_reply[0] + " prueba con otra cosa"
                 api.update_status(status=replyText, in_reply_to_status_id=tweetId)
                 gc.collect()
             else:
-                replyText = '@' + screenName + ' ' + "angelysaras gritando a " + full_reply[0]
+                replyText = '@' + screenName + ' ' + "El Charlie sapeando a " + full_reply[0]
                 api.update_with_media("output.png",status=replyText, in_reply_to_status_id=tweetId)
                 gc.collect()
 
